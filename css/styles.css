@@ -21,8 +21,8 @@ html {
  h1, h2, h3, p, ul {
  padding: 0;
  margin: 0;
- margin-top: 0;
- margin-bottom: 0;
+ /* margin-top: 0;
+ margin-bottom: 0; */
 }
 
 body {
@@ -50,6 +50,15 @@ body {
   background-color: cadetblue;
 }
 
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+}
+
 .container {
   width: 1200px;
   padding: 0 15px;
@@ -60,6 +69,8 @@ body {
 }
 
 .logo-header {
+  padding-top: 24px;
+padding-bottom: 24px;
   color: var(--logo-first-color);
   font-family: 'Raleway';
   font-weight: 700;
@@ -73,6 +84,8 @@ body {
 }
 
 .logo-color {
+  /* display: block; */
+
   color: var(--accent-color);
   font-family: 'Raleway';
   font-weight: 700;
@@ -80,12 +93,46 @@ body {
   line-height: 1.19;
 }
 
+.logo-test {
+  display: flex;
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav .item +.item {
+ margin-left: 50px; 
+  outline: 1px solid tomato;
+}
+
+/* .site-nav .item:last-child {
+  margin-right: 0;
+} 
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}*/
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--titele-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+
+.contact-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.contact-nav .item + .item {
+  margin-left: 50px;
 }
 
 .contact-nav .link {
@@ -103,16 +150,24 @@ body {
   color: var(--accent-color);
 }
 
+.section{
+  /* ???padding-top: 94px; є у дом завданні */
+  padding-bottom: 94px;
+}
+
 .section-title {
   color: var(--titele-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 /* ----- HERO ------- */
 .hero-section {
+   padding-top: 200px;
+  margin-bottom: 94px; 
   text-align: center;
   color: var(--white-text);
   background-color: var(--bg-color);
@@ -130,6 +185,8 @@ body {
  width: 696px;
  height: 120px; */
 /* margin: 200px 452px 280px; */
+/* margin-top: 200px;   */
+margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -143,6 +200,7 @@ body {
   /* display: inline-block;
 width: 216px;
   height: 50px; */
+  margin-bottom: 200px;
   color: var(--white-text);
   background-color: var(--accent-color);
   cursor: pointer;
@@ -170,17 +228,24 @@ width: 216px;
 
 /* ----- QUALITY ----- */
 
+
+
 .quality-title {
   color: var(--titele-text-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
+  margin-bottom: 10px;
 }
 
 .quality-text {
   font-size: 14px;
   line-height: 1.71;
 }
+
+/* ----- BUSINESS ----- */
+
+
 
 /* ----- TEAM ----- */
 
@@ -190,12 +255,14 @@ width: 216px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 10px;
 }
 
 .team-text {
   font-size: 16px;
   line-height: 1.19px;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 /* -----FOOTER----- */
@@ -209,6 +276,7 @@ width: 216px;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  margin-bottom: 20px;
 }
 
 .logo-footer:hover,
@@ -223,6 +291,7 @@ width: 216px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+  margin-bottom: 9px;
 }
 
 .footer-link {
@@ -231,6 +300,7 @@ width: 216px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+    margin-bottom: 9px;
 }
 
 .footer-address:hover,
@@ -242,7 +312,13 @@ width: 216px;
 
 /* --------- PORTFOLIO --------- */
 
+.list-btn {
+  margin-bottom: 34px;
+}
+
 .portfolio-button {
+  /* width: 73px;
+    height: 38px; */
   background-color: #f5f4fa;
   cursor: pointer;
   font-family: inherit;
@@ -250,6 +326,7 @@ width: 216px;
   font-size: 16px;
   line-height: 1.62;
   letter-spacing: 0.03em;
+  border-radius: 4px;
 }
 
 .portfolio-button:hover,
@@ -259,6 +336,7 @@ width: 216px;
 }
 
 .portfolio-title {
+  margin-bottom: 20px;
   color: var(--titele-text-color);
   font-size: 18px;
   line-height: 2;
@@ -266,6 +344,7 @@ width: 216px;
 }
 
 .portfolio-text {
+  margin-bottom: 4px;
   font-size: 16px;
   line-height: 1.88;
 }
